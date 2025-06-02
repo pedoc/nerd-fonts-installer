@@ -15,8 +15,8 @@ select font_name in "${fons_list[@]}" "Quit";
         echo "Starting download $font_name nerd font"
         
         if [ "$(command -v curl)" ]; then
-            echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-            curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+            echo "https://gh-proxy.com/https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+            curl -OL "https://gh-proxy.com/https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
             echo "creating fonts folder: ${HOME}/.fonts"
             mkdir -p  "$HOME/.fonts"
             echo "unzip the $font_name.zip"
@@ -26,8 +26,8 @@ select font_name in "${fons_list[@]}" "Quit";
             break
 
         elif [ "$(command -v wget)" ]; then
-            echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-            wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+            echo "https://gh-proxy.com/https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+            wget "https://gh-proxy.com/https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
             echo "creating fonts folder: ${HOME}/.fonts"
             mkdir -p  "$HOME/.fonts"
             echo "unzip the $font_name.zip"
